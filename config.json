@@ -1,0 +1,124 @@
+{
+    "token": "INSERT_TOKEN_HERE",
+    "guild_id": 1168615503984599040,
+    "roles": {
+        "muted": {
+            "name": "Muted",
+            "color": 0,
+            "hoist": false,
+            "mentionable": false,
+            "permissions": 556232934976
+        },
+        "member": {
+            "name": "Member",
+            "color": "#000000",
+            "hoist": true,
+            "mentionable": false,
+            "permissions": 831112941120
+        },
+        "owner": {
+            "name": "Owner",
+            "color": "#16711680",
+            "hoist": true,
+            "mentionable": false,
+            "permissions": 1099511627775
+        },
+        "admin": {
+            "name": "Admin",
+            "color": "#65280",
+            "hoist": true,
+            "mentionable": false,
+            "permissions": 1099511627775
+        },
+        "mod": {
+            "name": "Mod",
+            "color": "#685485",
+            "hoist": true,
+            "mentionable": false,
+            "permissions": 1098974232407
+        },
+        "famous": {
+            "name": "Famous",
+            "color": "#16738740",
+            "hoist": true,
+            "mentionable": false,
+            "permissions": 831112941120
+        },
+        "youtuber": {
+            "name": "YouTuber",
+            "color": "#16711680",
+            "hoist": true,
+            "mentionable": false,
+            "permissions": 831112941120
+        },
+        "friend": {
+            "name": "Friend",
+            "color": "#6950317",
+            "hoist": false,
+            "mentionable": false,
+            "permissions": 831112941120
+        },
+        "mvp": {
+            "name": "MVP",
+            "color": "#8900331",
+            "hoist": true,
+            "mentionable": false,
+            "permissions": 968552156736
+        },
+        "supporter": {
+            "name": "Supporter",
+            "color": "#3329330",
+            "hoist": true,
+            "mentionable": false,
+            "permissions": 968552156736
+        },
+        "staff": {
+            "name": "Staff",
+            "color": "#8421504",
+            "hoist": true,
+            "mentionable": false,
+            "permissions": 1090384162647
+        }
+    },
+    "categories": {
+        "welcome": {
+            "name": "๏▬▬▬▬(WELCOME)▬▬▬▬๏",
+            "channels": [
+                {
+                    "name": "👋│welcome",
+                    "allow": "66625",
+                    "deny": "377957124096"
+                }
+            ]
+        },
+        "info": {
+            "name": "๏▬▬▬▬(INFO)▬▬▬▬๏"
+        },
+        "text": {
+            "name": "๏▬▬▬▬(TEXT)▬▬▬▬๏",
+            "channels": [
+                {
+                    "name": "general"
+                }
+            ]
+        },
+        "media": {
+            "name": "๏▬▬▬▬(MEDIA)▬▬▬▬๏",
+            "channels": [
+                {}
+            ]
+        },
+        "voice": {
+            "name": "๏▬▬▬▬(VOICE)▬▬▬▬๏",
+            "channels": [
+                {}
+            ]
+        },
+        "gaming": {
+            "name": "๏▬▬▬▬(GAMING)▬▬▬▬๏",
+            "channels": [
+                {}
+            ]
+        }
+    }
+}
