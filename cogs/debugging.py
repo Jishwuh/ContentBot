@@ -154,7 +154,7 @@ class Debugging(GroupCog, name="debugging", description="Debugging commands"):
 
     @app_commands.command(name = 'sync_global', description = 'Syncs all commands to global')
     async def syncall(self, interaction: Interaction):
-        if interaction.user.id == (775117485489258527 or 451160769711702016):
+        if interaction.user.id == 752626109857923123 or interaction.user.id == 1088105107071189113:
             await self.bot.tree.sync(guild=None)
             await interaction.response.send_message('Synced commands globally!', ephemeral=True)
             print(f'Synced commands to global, executed by {interaction.user} ({interaction.user.id})')

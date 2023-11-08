@@ -4,6 +4,10 @@ from pathlib import Path
 from discord.ext import commands
 from discord.message import Message
 import json
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 #Create a basic discord bot
 class client(commands.Bot):
@@ -35,7 +39,7 @@ class client(commands.Bot):
 
 
 bot = client()  
-bot.run(bot.config['token'])
+bot.run(os.getenv('TOKEN'))
     
 @bot.command()
 @commands.guild_only()

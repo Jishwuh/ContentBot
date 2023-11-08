@@ -1,7 +1,36 @@
 {
     "token": "INSERT_TOKEN_HERE",
+    "show_first_time_setup": false,
     "guild_id": 1168615503984599040,
     "roles": {
+        "owner": {
+            "name": "Owner",
+            "color": 16711680,
+            "hoist": true,
+            "mentionable": false,
+            "permissions": 105553116266495
+        },
+        "admin": {
+            "name": "Admin",
+            "color": 16753920,
+            "hoist": true,
+            "mentionable": false,
+            "permissions": 105553116266463
+        },
+        "mod": {
+            "name": "Mod",
+            "color": 32768,
+            "hoist": true,
+            "mentionable": false,
+            "permissions": 105552310960071
+        },
+        "staff": {
+            "name": "Staff",
+            "color": 65535,
+            "hoist": true,
+            "mentionable": false,
+            "permissions": 1090384162647
+        },
         "muted": {
             "name": "Muted",
             "color": 0,
@@ -9,75 +38,26 @@
             "mentionable": false,
             "permissions": 556232934976
         },
-        "member": {
-            "name": "Member",
-            "color": "#000000",
-            "hoist": true,
-            "mentionable": false,
-            "permissions": 831112941120
-        },
-        "owner": {
-            "name": "Owner",
-            "color": "#16711680",
-            "hoist": true,
-            "mentionable": false,
-            "permissions": 1099511627775
-        },
-        "admin": {
-            "name": "Admin",
-            "color": "#65280",
-            "hoist": true,
-            "mentionable": false,
-            "permissions": 1099511627775
-        },
-        "mod": {
-            "name": "Mod",
-            "color": "#685485",
-            "hoist": true,
-            "mentionable": false,
-            "permissions": 1098974232407
-        },
-        "famous": {
-            "name": "Famous",
-            "color": "#16738740",
-            "hoist": true,
-            "mentionable": false,
-            "permissions": 831112941120
-        },
-        "youtuber": {
-            "name": "YouTuber",
-            "color": "#16711680",
+        "creators": {
+            "name": "Content Creator",
+            "color": 16738740,
             "hoist": true,
             "mentionable": false,
             "permissions": 831112941120
         },
         "friend": {
             "name": "Friend",
-            "color": "#6950317",
+            "color": 6950317,
             "hoist": false,
             "mentionable": false,
             "permissions": 831112941120
         },
-        "mvp": {
-            "name": "MVP",
-            "color": "#8900331",
+        "member": {
+            "name": "Member",
+            "color": 8421504,
             "hoist": true,
             "mentionable": false,
-            "permissions": 968552156736
-        },
-        "supporter": {
-            "name": "Supporter",
-            "color": "#3329330",
-            "hoist": true,
-            "mentionable": false,
-            "permissions": 968552156736
-        },
-        "staff": {
-            "name": "Staff",
-            "color": "#8421504",
-            "hoist": true,
-            "mentionable": false,
-            "permissions": 1090384162647
+            "permissions": 831112941120
         }
     },
     "categories": {
@@ -88,36 +68,181 @@
                     "name": "👋│welcome",
                     "allow": "66625",
                     "deny": "377957124096"
+                },
+                {
+                    "name": "📃│about",
+                    "allow": "66625",
+                    "deny": "377957124096"
+                },
+                {
+                    "name": "🔰|get-roles",
+                    "allow": "66625",
+                    "deny": "377957124096"
+                }, 
+                {
+                    "name": "🔨|rules",
+                    "allow": "66625",
+                    "deny": "377957124096"
+                },
+                {
+                    "name": "😊|introductions",
+                    "allow": "347201",
+                    "deny": "103079215104"
                 }
             ]
         },
         "info": {
-            "name": "๏▬▬▬▬(INFO)▬▬▬▬๏"
+            "name": "๏▬▬▬▬(INFO)▬▬▬▬๏",
+            "channels": [
+                {
+                    "name": "🔼|uploads",
+                    "allow": "66625",
+                    "deny": "377957124096"
+                },
+                {
+                    "name": "📸|socials",
+                    "allow": "66625",
+                    "deny": "377957124096"
+                }
+            ]
         },
         "text": {
             "name": "๏▬▬▬▬(TEXT)▬▬▬▬๏",
             "channels": [
                 {
-                    "name": "general"
+                    "name": "💬|general",
+                    "allow": "515463564352",
+                    "deny": "4096"
                 }
             ]
         },
         "media": {
             "name": "๏▬▬▬▬(MEDIA)▬▬▬▬๏",
             "channels": [
-                {}
+                {
+                    "name": "🤣|Memes",
+                    "allow": "378024610880",
+                    "deny": "137438957568"
+                },
+                {
+                    "name": "📸|Selfies",
+                    "allow": "378024610880",
+                    "deny": "137438957568"
+                },
+                {
+                    "name": "🐶|Pets",
+                    "allow": "378024610880",
+                    "deny": "137438957568"
+                },
+                {
+                    "name": "🍔|Food",
+                    "allow": "378024610880",
+                    "deny": "137438957568"
+                },
+                {
+                    "name": "🎨|Art Gallery",
+                    "allow": "378024610880",
+                    "deny": "137438957568"
+                },
+                {
+                    "name": "🎮|Gaming Clips",
+                    "allow": "378024610880",
+                    "deny": "137438957568"
+                },
+                {
+                    "name": "🖥️|Setups",
+                    "allow": "378024610880",
+                    "deny": "137438957568"
+                }
             ]
+            
         },
         "voice": {
             "name": "๏▬▬▬▬(VOICE)▬▬▬▬๏",
             "channels": [
-                {}
+                {
+                    "name": "🎙️|General Voice",
+                    "allow": "859097648704",
+                    "deny": "29364480",
+                    "user_limit": 0
+                },
+                {
+                    "name": "👔|Working",
+                    "allow": "859097648704",
+                    "deny": "29364480",
+                    "user_limit": 0
+                },
+                {
+                    "name": "🍿|Watch Party",
+                    "allow": "859064094272",
+                    "deny": "62918912",
+                    "user_limit": 0
+                },
+                {
+                    "name": "🍹|Chill Lounge",
+                    "allow": "859097648704",
+                    "deny": "29364480",
+                    "user_limit": 0
+                },
+                {
+                    "name": "🎤|Karaoke Night",
+                    "allow": "859097648704",
+                    "deny": "29364480",
+                    "user_limit": 0
+                }
             ]
         },
         "gaming": {
             "name": "๏▬▬▬▬(GAMING)▬▬▬▬๏",
             "channels": [
-                {}
+                {
+                    "name": "🎮|CSGO/2",
+                    "allow": "859097648704",
+                    "deny": "29364480",
+                    "user_limit": 0
+                },
+                {
+                    "name": "🎮|Fortnite",
+                    "allow": "859097648704",
+                    "deny": "29364480",
+                    "user_limit": 0
+                },
+                {
+                    "name": "🎮|Minecraft",
+                    "allow": "859097648704",
+                    "deny": "29364480",
+                    "user_limit": 0
+                },
+                {
+                    "name": "🎮|Roblox",
+                    "allow": "859097648704",
+                    "deny": "29364480",
+                    "user_limit": 0
+                },
+                {
+                    "name": "🎮|Gaming Channel 1",
+                    "allow": "859097648704",
+                    "deny": "29364480",
+                    "user_limit": 0
+                },
+                {
+                    "name": "🎮|Gaming Channel 2",
+                    "allow": "859097648704",
+                    "deny": "29364480",
+                    "user_limit": 0
+                },
+                {
+                    "name": "🎮|Gaming Channel 3",
+                    "allow": "859097648704",
+                    "deny": "29364480",
+                    "user_limit": 0
+                },
+                {
+                    "name": "🎮|1V1",
+                    "allow": "859097648704",
+                    "deny": "29364480",
+                    "user_limit": 2
+                }
             ]
         }
     }
