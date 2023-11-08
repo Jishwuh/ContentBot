@@ -63,130 +63,129 @@
     },
     "categories": {
         "welcome": {
-            "name": "๏▬▬▬▬(WELCOME)▬▬▬▬๏",
+            "name": "\u0e4f\u25ac\u25ac\u25ac\u25ac(WELCOME)\u25ac\u25ac\u25ac\u25ac\u0e4f",
             "channels": [
                 {
-                    "name": "👋│welcome",
+                    "name": "\ud83d\udc4b\u2502welcome",
                     "allow": "66625",
                     "deny": "377957124096"
                 },
                 {
-                    "name": "📃│about",
+                    "name": "\ud83d\udcc3\u2502about",
                     "allow": "66625",
                     "deny": "377957124096"
                 },
                 {
-                    "name": "🔰|get-roles",
-                    "allow": "66625",
-                    "deny": "377957124096"
-                }, 
-                {
-                    "name": "🔨|rules",
+                    "name": "\ud83d\udd30|get-roles",
                     "allow": "66625",
                     "deny": "377957124096"
                 },
                 {
-                    "name": "😊|introductions",
+                    "name": "\ud83d\udd28|rules",
+                    "allow": "66625",
+                    "deny": "377957124096"
+                },
+                {
+                    "name": "\ud83d\ude0a|introductions",
                     "allow": "347201",
                     "deny": "103079215104"
                 }
             ]
         },
         "info": {
-            "name": "๏▬▬▬▬(INFO)▬▬▬▬๏",
+            "name": "\u0e4f\u25ac\u25ac\u25ac\u25ac(INFO)\u25ac\u25ac\u25ac\u25ac\u0e4f",
             "channels": [
                 {
-                    "name": "🔼|uploads",
+                    "name": "\ud83d\udd3c|uploads",
                     "allow": "66625",
                     "deny": "377957124096"
                 },
                 {
-                    "name": "📸|socials",
+                    "name": "\ud83d\udcf8|socials",
                     "allow": "66625",
                     "deny": "377957124096"
                 }
             ]
         },
         "text": {
-            "name": "๏▬▬▬▬(TEXT)▬▬▬▬๏",
+            "name": "\u0e4f\u25ac\u25ac\u25ac\u25ac(TEXT)\u25ac\u25ac\u25ac\u25ac\u0e4f",
             "channels": [
                 {
-                    "name": "💬|general",
+                    "name": "\ud83d\udcac|general",
                     "allow": "515463564352",
                     "deny": "4096"
                 }
             ]
         },
         "media": {
-            "name": "๏▬▬▬▬(MEDIA)▬▬▬▬๏",
+            "name": "\u0e4f\u25ac\u25ac\u25ac\u25ac(MEDIA)\u25ac\u25ac\u25ac\u25ac\u0e4f",
             "channels": [
                 {
-                    "name": "🤣|Memes",
+                    "name": "\ud83e\udd23|Memes",
                     "allow": "378024610880",
                     "deny": "137438957568"
                 },
                 {
-                    "name": "📸|Selfies",
+                    "name": "\ud83d\udcf8|Selfies",
                     "allow": "378024610880",
                     "deny": "137438957568"
                 },
                 {
-                    "name": "🐶|Pets",
+                    "name": "\ud83d\udc36|Pets",
                     "allow": "378024610880",
                     "deny": "137438957568"
                 },
                 {
-                    "name": "🍔|Food",
+                    "name": "\ud83c\udf54|Food",
                     "allow": "378024610880",
                     "deny": "137438957568"
                 },
                 {
-                    "name": "🎨|Art Gallery",
+                    "name": "\ud83c\udfa8|Art Gallery",
                     "allow": "378024610880",
                     "deny": "137438957568"
                 },
                 {
-                    "name": "🎮|Gaming Clips",
+                    "name": "\ud83c\udfae|Gaming Clips",
                     "allow": "378024610880",
                     "deny": "137438957568"
                 },
                 {
-                    "name": "🖥️|Setups",
+                    "name": "\ud83d\udda5\ufe0f|Setups",
                     "allow": "378024610880",
                     "deny": "137438957568"
                 }
             ]
-            
         },
         "voice": {
-            "name": "๏▬▬▬▬(VOICE)▬▬▬▬๏",
+            "name": "\u0e4f\u25ac\u25ac\u25ac\u25ac(VOICE)\u25ac\u25ac\u25ac\u25ac\u0e4f",
             "channels": [
                 {
-                    "name": "🎙️|General Voice",
+                    "name": "\ud83c\udf99\ufe0f|General Voice",
                     "allow": "859097648704",
                     "deny": "29364480",
                     "user_limit": 0
                 },
                 {
-                    "name": "👔|Working",
+                    "name": "\ud83d\udc54|Working",
                     "allow": "859097648704",
                     "deny": "29364480",
                     "user_limit": 0
                 },
                 {
-                    "name": "🍿|Watch Party",
+                    "name": "\ud83c\udf7f|Watch Party",
                     "allow": "859064094272",
                     "deny": "62918912",
                     "user_limit": 0
                 },
                 {
-                    "name": "🍹|Chill Lounge",
+                    "name": "\ud83c\udf79|Chill Lounge",
                     "allow": "859097648704",
                     "deny": "29364480",
                     "user_limit": 0
                 },
                 {
-                    "name": "🎤|Karaoke Night",
+                    "name": "\ud83c\udfa4|Karaoke Night",
                     "allow": "859097648704",
                     "deny": "29364480",
                     "user_limit": 0
@@ -194,57 +193,58 @@
             ]
         },
         "gaming": {
-            "name": "๏▬▬▬▬(GAMING)▬▬▬▬๏",
+            "name": "\u0e4f\u25ac\u25ac\u25ac\u25ac(GAMING)\u25ac\u25ac\u25ac\u25ac\u0e4f",
             "channels": [
                 {
-                    "name": "🎮|CSGO/2",
+                    "name": "\ud83c\udfae|CSGO/2",
                     "allow": "859097648704",
                     "deny": "29364480",
                     "user_limit": 0
                 },
                 {
-                    "name": "🎮|Fortnite",
+                    "name": "\ud83c\udfae|Fortnite",
                     "allow": "859097648704",
                     "deny": "29364480",
                     "user_limit": 0
                 },
                 {
-                    "name": "🎮|Minecraft",
+                    "name": "\ud83c\udfae|Minecraft",
                     "allow": "859097648704",
                     "deny": "29364480",
                     "user_limit": 0
                 },
                 {
-                    "name": "🎮|Roblox",
+                    "name": "\ud83c\udfae|Roblox",
                     "allow": "859097648704",
                     "deny": "29364480",
                     "user_limit": 0
                 },
                 {
-                    "name": "🎮|Gaming Channel 1",
+                    "name": "\ud83c\udfae|Gaming Channel 1",
                     "allow": "859097648704",
                     "deny": "29364480",
                     "user_limit": 0
                 },
                 {
-                    "name": "🎮|Gaming Channel 2",
+                    "name": "\ud83c\udfae|Gaming Channel 2",
                     "allow": "859097648704",
                     "deny": "29364480",
                     "user_limit": 0
                 },
                 {
-                    "name": "🎮|Gaming Channel 3",
+                    "name": "\ud83c\udfae|Gaming Channel 3",
                     "allow": "859097648704",
                     "deny": "29364480",
                     "user_limit": 0
                 },
                 {
-                    "name": "🎮|1V1",
+                    "name": "\ud83c\udfae|1V1",
                     "allow": "859097648704",
                     "deny": "29364480",
                     "user_limit": 2
                 }
             ]
         }
-    }
+    },
+    "setup": true
 }
