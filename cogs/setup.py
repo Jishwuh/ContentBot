@@ -36,6 +36,10 @@ class Setup(GroupCog, name='setup', description='Setup the bot and server!'):
                 #Set the permissions
                 await channelCreate.set_permissions(inter.guild.default_role, overwrite=PermissionOverwrite.from_pair(allow=Permissions(int(channel['allow'])), deny=Permissions(int(channel['deny']))))
         await inter.followup.send('Setup complete!')
+        self.config['setup'] = True
+        with open('config.json', 'w') as f:
+            json.dump(self.config, f, indent=4)
+            
         # --------------------------------------------------
 
     #Duplicate the setup command but its a mock, and just responds with the channels and categories and doesn't make them
