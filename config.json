@@ -1,7 +1,9 @@
 {
     "token": "INSERT_TOKEN_HERE",
     "show_first_time_setup": false,
-    "setup_complete": false,
+    "channelSetup": true,
+    "roleSetup": false,
+    "welcomeChannel": 1172266489890480130,
     "guild_id": 1168615503984599040,
     "roles": {
         "owner": {

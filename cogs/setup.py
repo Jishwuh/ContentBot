@@ -14,13 +14,10 @@ class Setup(GroupCog, name='setup', description='Setup the bot and server!'):
         self.bot = bot
         self.config = self.bot.config
 
-    @app_commands.command(name='setup', description='Setup the bot and server!')
+    @app_commands.command(name='channels', description='Setup the channels!')
     @app_commands.checks.has_permissions(administrator=True)
-    async def setup(self, inter:Interaction):
+    async def channels(self, inter:Interaction):
         await inter.response.defer(thinking=True)
-        #Create the roles
-        for role in self.config['roles']:
-            await inter.guild.create_role(name=self.config['roles'][role]['name'], color=self.config['roles'][role]['color'], hoist=self.config['roles'][role]['hoist'], mentionable=self.config['roles'][role]['mentionable'], permissions=Permissions(int(self.config['roles'][role]['permissions'])))
         # CHANNEL AND CATEGORIES DONE
         # --------------------------------------------------
         for category in self.config['categories']:
@@ -35,32 +32,28 @@ class Setup(GroupCog, name='setup', description='Setup the bot and server!'):
                     channelCreate = await inter.guild.create_text_channel(name=channel['name'], category=categoryCreate)
                 #Set the permissions
                 await channelCreate.set_permissions(inter.guild.default_role, overwrite=PermissionOverwrite.from_pair(allow=Permissions(int(channel['allow'])), deny=Permissions(int(channel['deny']))))
-        await inter.followup.send('Setup complete!')
-        self.config['setup'] = True
+        await inter.followup.send('Setup for channels complete!')
+        #Open the config and edit channelSetup to true
+        with open('config.json', 'r') as f:
+            config = json.load(f)
+        config['channelSetup'] = True
         with open('config.json', 'w') as f:
-            json.dump(self.config, f, indent=4)
-            
+            json.dump(config, f, indent=4)
+
         # --------------------------------------------------
 
-    #Duplicate the setup command but its a mock, and just responds with the channels and categories and doesn't make them
-    @app_commands.command(name='mock', description='Mock the setup command!')
+    @app_commands.command(name='roles', description='Setup the roles!')
     @app_commands.checks.has_permissions(administrator=True)
-    async def mock(self, inter:Interaction):
-        #Get the categories field and create a list of categories
-        categories = []
-        for category in self.config['categories']:
-            categories.append(self.config['categories'][category]['name'])
-        #Create the categories
-        for category in categories:
-            await inter.response.send_message(category)
-        #Get the channels field and create a list of channels
-        channels = {}
-        for category in self.config['categories']:
-            for channel in self.config['categories'][category]['channels']:
-                print(channel)
-                channels[category] == channel
-
-
+    async def roles(self, inter:Interaction):
+        for role in self.config['roles']:
+            await inter.guild.create_role(name=self.config['roles'][role]['name'], color=self.config['roles'][role]['color'], hoist=self.config['roles'][role]['hoist'], mentionable=self.config['roles'][role]['mentionable'], permissions=Permissions(int(self.config['roles'][role]['permissions'])))
+        await inter.followup.send('Roles Setup complete!')
+        #Open the config and edit roleSetup to true
+        with open('config.json', 'r') as f:
+            config = json.load(f)
+        config['roleSetup'] = True
+        with open('config.json', 'w') as f:
+            json.dump(config, f, indent=4)
 
     #create a reset command that deletes all channels and categories, and then just creates 1 that says general
     @app_commands.command(name='reset', description='Reset the server!')
@@ -81,5 +74,6 @@ class Setup(GroupCog, name='setup', description='Setup the bot and server!'):
             else:
                 await role.delete()
         await inter.followup.send('Reset complete!')
+        
 async def setup(bot:commands.Bot):
     await bot.add_cog(Setup(bot))
