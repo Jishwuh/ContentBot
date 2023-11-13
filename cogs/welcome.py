@@ -13,7 +13,7 @@ from discord.ext.commands import GroupCog
 import io
 from discord import CategoryChannel
 import aiosqlite3 as sqlite3
-from PIL import Image, ImageDraw, ImageFont
+from easy_pil import Editor, load_image_async, Font
 
 @app_commands.guild_only()
 @app_commands.default_permissions(administrator=True)
@@ -21,30 +21,28 @@ class Welcome(GroupCog, name='welcome', description='General Welcome Messages'):
     def __init__(self, bot:commands.Bot):
         self.bot = bot
         self.config = self.bot.config
+        self.welcomeChannel = self.config['welcomeChannel']
     
     @commands.Cog.listener()
-    async def on_member_join(self, member):
-        #Check the welcomeChannel field in the config
-        if self.config['welcomeChannel'] == 0:
-            return
-        # Get the channel where you want to send the welcome image
-        channel = self.bot.get_channel(self.config['welcomeChannel'])
+    async def on_member_join(self, member: discord.Member):
+        background = Editor('assets/welcome.png')
+        if member.avatar is None:
+            profileImage = await load_image_async(member.default_avatar.url)
+        else:
+            profileImage = await load_image_async(member.avatar.url)
+        profile = Editor(profileImage).resize((200, 200)).circle_image()
+        poppins = Font.poppins(size=50, variant='bold')
 
-        # Create an image with PIL that will serve as the welcome image with the user's name, avatar and discriminator
-        # Create an image object
-        img = Image.new('RGB', (1920, 1080), color=(0, 0, 0))
-        # Create a draw object
-        d = ImageDraw.Draw(img)
-        # Load the default font
-        font = ImageFont.load_default()
-        # Draw the text
-        d.text((10, 10), f'Welcome {member.name}#{member.discriminator}', font=font, fill=(255, 255, 255))
-        # Save the image
-        img.save('welcome.png')
+        smallPoppins = Font.poppins(size=30, variant='light')
 
-        # Send the image to the channel
-        await channel.send(file=discord.File('welcome.png'))
+        background.paste(profile, (325, 90))
+        background.ellipse((325, 90), 150, 150, outline='black', stroke_width=5)
 
+        background.text((400, 260), f'Welcome {member.name}#{member.discriminator} to {member.guild.name}!', font=poppins, align='center')
+        background.text((400, 325), f'You are member #{len(member.guild.members)}!', font=smallPoppins, align='center')
+
+        file = File(fp=background.image_bytes, filename='newestMember.png')
+        await self.bot.get_channel(self.welcomeChannel).send(file=file)
 
 async def setup(bot):
     await bot.add_cog(Welcome(bot))
