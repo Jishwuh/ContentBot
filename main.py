@@ -4,6 +4,7 @@ from pathlib import Path
 from discord.ext import commands
 from discord.message import Message
 import json
+from discord.ext.commands import CommandNotFound
 from dotenv import load_dotenv
 import os
 
@@ -51,3 +52,9 @@ async def sync(ctx):
         f"Synced {len(synced)} commands."
     )
     return
+
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, CommandNotFound):
+        return
+    raise error
